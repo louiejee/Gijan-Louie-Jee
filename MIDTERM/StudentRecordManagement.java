@@ -85,7 +85,7 @@ public class StudentRecordManagement {
 
         Student student = new Student(studentId, firstName, middleName, lastName, suffix, age, yearLevel, selectedCourse, phoneNumber, email);
         studentRecords.put(studentId, student);
-
+        System.out.println();
         System.out.println("Student record for " + firstName + " " + lastName + " created successfully.");
     }
 
@@ -94,6 +94,7 @@ public class StudentRecordManagement {
 
         while (!exit) {
             System.out.println("\nStudent Record Management App v1");
+            System.out.println();
             System.out.println("Student Record Selection Menu:");
             System.out.println("----------------------------------");
             System.out.println("1. Update Student Profile Details");
@@ -133,46 +134,58 @@ public class StudentRecordManagement {
             Student student = studentRecords.get(studentId);
 
             System.out.println("\nUpdating Profile Details for Student ID: " + student.getStudentId());
+            
+            System.out.print("1. Update Student ID No.: ");
+            String newStudentId = scanner.nextLine();
+            
+            if (!studentRecords.containsKey(newStudentId)) {
+            studentRecords.remove(studentId); // Remove the old ID
+            student.setStudentId(newStudentId); // Update the student's ID
+            studentRecords.put(newStudentId, student); // Add with the new ID
 
-            System.out.print("Enter new First Name: ");
+            System.out.print("2. Update First Name: ");
             String newFirstName = scanner.nextLine();
             student.setFirstName(newFirstName);
 
-            System.out.print("Enter new Middle Name: ");
+            System.out.print("3. Update Middle Name: ");
             String newMiddleName = scanner.nextLine();
             student.setMiddleName(newMiddleName);
 
-            System.out.print("Enter new Last Name: ");
+            System.out.print("4. Update Last Name: ");
             String newLastName = scanner.nextLine();
             student.setLastName(newLastName);
 
-            System.out.print("Enter new Suffix: ");
+            System.out.print("5. Update Suffix: ");
             String newSuffix = scanner.nextLine();
             student.setSuffix(newSuffix);
 
-            System.out.print("Enter new Age: ");
+            System.out.print("6. Update Age: ");
             int newAge = scanner.nextInt();
             student.setAge(newAge);
 
-            System.out.print("Enter new Year Level: ");
+            System.out.print("7. Update Year Level: ");
             int newYearLevel = scanner.nextInt();
             student.setYearLevel(newYearLevel);
             scanner.nextLine(); // Consume the newline character
 
-            System.out.print("Enter new Phone Number: ");
+            System.out.print("8. Update Phone Number: ");
             String newPhoneNumber = scanner.nextLine();
             student.setPhoneNumber(newPhoneNumber);
 
-            System.out.print("Enter new Email: ");
+            System.out.print("9. Update Email: ");
             String newEmail = scanner.nextLine();
             student.setEmail(newEmail);
+            
+            System.out.println("0. Return");
 
-            System.out.println("Profile details updated successfully.");
+             System.out.println("Profile details updated successfully.");
         } else {
-            System.out.println("Student with ID " + studentId + " not found.");
+            System.out.println("The new Student ID is already in use. Please choose a different ID.");
         }
+    } else {
+        System.out.println("Student with ID " + studentId + " not found.");
     }
-
+}
     private static void updateStudentCourseDetails(Map<String, Student> studentRecords, Scanner scanner) {
         System.out.print("Enter student ID to update course details: ");
         String studentId = scanner.nextLine();
