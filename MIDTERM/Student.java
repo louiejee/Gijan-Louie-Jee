@@ -1,126 +1,45 @@
-class Student {
-    private String studentId;
-    private String firstName;
-    private String middleName;
-    private String lastName;
-    private String suffix;
-    private int age;
-    private int yearLevel;
-    private String courseName;
-    private String courseCode; // New property for course code
-    private String department; // New property for department
-    private String phoneNumber;
-    private String email;
+public class Student {
+    private String first_name = "";
+    private String middle_name = "";
+    private String last_name = "";
+    private String suffix = "";
 
-    public Student(String studentId, String firstName, String middleName, String lastName, String suffix, int age, int yearLevel, String courseName, String courseCode, String department, String phoneNumber, String email) {
-        this.studentId = studentId;
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.lastName = lastName;
-        this.suffix = suffix;
-        this.age = age;
-        this.yearLevel = yearLevel;
-        this.courseName = courseName;
-        this.courseCode = courseCode;
-        this.department = department;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-    }
-
-    public String getStudentId() {
-        return studentId;
-    }
-    
-    public void setStudentID(String studentId) {
-       this.studentId = studentId;
-    }
-
+    // Getters
     public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        return first_name;
     }
 
     public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
+        return middle_name;
     }
 
     public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+        return last_name;
     }
 
     public String getSuffix() {
         return suffix;
     }
 
-    public void setSuffix(String suffix) {
-        this.suffix = suffix;
+    // Setters
+    public void setFirstName(String fName) {
+        first_name = fName;
     }
 
-    public int getAge() {
-        return age;
+    public void setMiddleName(String mName) {
+        middle_name = mName;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-    
-    public int getYearLevel() {
-       return yearLevel;
-    }
-    
-    public void setYearLevel(int yearLevel) {
-        this.yearLevel = yearLevel;
+    public void setLastName(String lName) {
+        last_name = lName;
     }
 
-    public String getCourseName() {
-        return courseName;
-    }
-    
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
-    }
-    
-    public String getCourseCode() {
-        return courseCode;
+    public void setSuffix(String suff) {
+        suffix = suff;
     }
 
-    public void setCourseCode(String courseCode) {
-        this.courseCode = courseCode;
-    }
-    
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    // Custom Methods/Computed Properties
+    public String getFullName() {
+        return first_name + " " + middle_name + " " + last_name + " " + suffix;
     }
 }
