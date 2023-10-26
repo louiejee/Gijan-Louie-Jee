@@ -1,126 +1,102 @@
-class Student {
-    private String studentId;
-    private String firstName;
-    private String middleName;
-    private String lastName;
-    private String suffix;
-    private int age;
-    private int yearLevel;
-    private String courseName;
-    private String courseCode; // New property for course code
-    private String department; // New property for department
-    private String phoneNumber;
-    private String email;
+public class Student {
+        private String studentId;
+        private String firstName;
+        private String middleName;
+        private String lastName;
+        private String suffix;
+        private int age;
+        private int yearLevel;
+        private Course course;
+        private String phoneNumber;
+        private String email;
 
-    public Student(String studentId, String firstName, String middleName, String lastName, String suffix, int age, int yearLevel, String courseName, String courseCode, String department, String phoneNumber, String email) {
-        this.studentId = studentId;
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.lastName = lastName;
-        this.suffix = suffix;
-        this.age = age;
-        this.yearLevel = yearLevel;
-        this.courseName = courseName;
-        this.courseCode = courseCode;
-        this.department = department;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-    }
+        public Student(String studentId, String firstName, String middleName, String lastName, String suffix,
+                       int age, int yearLevel, Course course, String phoneNumber, String email) {
+            this.studentId = studentId;
+            this.firstName = firstName;
+            this.middleName = middleName;
+            this.lastName = lastName;
+            this.suffix = suffix;
+            this.age = age;
+            this.yearLevel = yearLevel;
+            this.course = course;
+            this.phoneNumber = phoneNumber;
+            this.email = email;
+        }
 
-    public String getStudentId() {
-        return studentId;
-    }
-    
-    public void setStudentID(String studentId) {
-       this.studentId = studentId;
-    }
+        public String getStudentId() {
+            return studentId;
+        }
 
-    public String getFirstName() {
-        return firstName;
-    }
+        public String getFirstName() {
+            return firstName;
+        }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+        public void setFirstName(String firstName) {
+            this.firstName = firstName;
+        }
 
-    public String getMiddleName() {
-        return middleName;
-    }
+        public String getMiddleName() {
+            return middleName;
+        }
 
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
+        public void setMiddleName(String middleName) {
+            this.middleName = middleName;
+        }
 
-    public String getLastName() {
-        return lastName;
-    }
+        public String getLastName() {
+            return lastName;
+        }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+        public void setLastName(String lastName) {
+            this.lastName = lastName;
+        }
 
-    public String getSuffix() {
-        return suffix;
-    }
+        public String getSuffix() {
+            return suffix;
+        }
 
-    public void setSuffix(String suffix) {
-        this.suffix = suffix;
-    }
+        public void setSuffix(String suffix) {
+            this.suffix = suffix;
+        }
 
-    public int getAge() {
-        return age;
-    }
+        public int getAge() {
+            return age;
+        }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-    
-    public int getYearLevel() {
-       return yearLevel;
-    }
-    
-    public void setYearLevel(int yearLevel) {
-        this.yearLevel = yearLevel;
-    }
+        public void setAge(int age) {
+            this.age = age;
+        }
 
-    public String getCourseName() {
-        return courseName;
-    }
-    
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
-    }
-    
-    public String getCourseCode() {
-        return courseCode;
-    }
+        public int getYearLevel() {
+            return yearLevel;
+        }
 
-    public void setCourseCode(String courseCode) {
-        this.courseCode = courseCode;
-    }
-    
+        public void setYearLevel(int yearLevel) {
+            this.yearLevel = yearLevel;
+        }
 
-    public String getDepartment() {
-        return department;
-    }
+        public Course getCourse() {
+            return course;
+        }
 
-    public void setDepartment(String department) {
-        this.department = department;
-    }
+        public void setCourse(Course course) {
+            this.course = course;
+        }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
+        public String getPhoneNumber() {
+            return phoneNumber;
+        }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+        public void setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+        }
 
-    public String getEmail() {
-        return email;
-    }
+        public String getEmail() {
+            return email;
+        }
 
-    public void setEmail(String email) {
-        this.email = email;
+        public void setEmail(String email) {
+            this.email = email;
+        }
     }
-}
